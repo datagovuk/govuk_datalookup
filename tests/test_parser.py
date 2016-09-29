@@ -18,3 +18,8 @@ def test_invalid():
     results = parse_html(u'test', html)
 
     assert len(results) == 0
+
+def test_bad_input():
+    assert parse_html('', None) == {}
+    assert parse_html(None, None) == {}
+

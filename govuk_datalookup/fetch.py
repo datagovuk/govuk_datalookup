@@ -46,8 +46,8 @@ def parse_html(name, html):
     Parse the provided html to find a dataset
     """
     parser = HTMLParser(encoding="UTF-8")
-    parser.feed(html)
     try:
+        parser.feed(html)
         dom = parser.close()
     except:
         return {}
